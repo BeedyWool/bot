@@ -8,7 +8,7 @@ bot.on("ready", function () {
 	console.log("Bot connecté");
 });
 
-bot.login("MzcxMjc2Njc5NzEwMjQ0ODY0.DMzSBA.auAmUR97u1WBNFsU8KHvUeOK-DM")
+bot.login("process.env.TOKEN")
 
 bot.on('message', msg => {
   if (msg.content.startsWith('/invite')) {
@@ -98,53 +98,6 @@ var commande = [":8ball: | 🔴 Je ne pense pas, " + message.author.username,":8
 })
 
 
-bot.on("message", message => {
-
-
-if (message.content === "/play nowornever") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./nowornever.mp3')
-    message.channel.sendMessage(":musical_note: | La musique : **Now or never** *Splatoon2* est lancée. `[1:02]`")
-})}})
-
-
-bot.on("message", message => {
-
-
-if (message.content === "/musique liste") {
-	message.channel.send({embed: {
-			color: 0Xff0000,
-			author: {
-					name: "Musiques",
-			},
-			fields: [{
-							name: '【Splatoon2】',
-							value: "【WetFloor】/play nowornever, /play inkoming, /play ripentry undertow, /play don'tslip, /play endolphinsurge, /play turfmasterrs, /play inkanotherday 【Squids Sisters】/play bombrushblush, /play tidalrush, /play spicycalamari, /play freshstart 【Tenta-Cool】/play colorpulse, /play ebb&flow, /play acidhues, /play muckwarfare, /play tcnowornever, /play festzest, /play party'sover 【Bottom Feeders】/play shipwreckin', /play fin&fiddles, /play seafoamshanty 【Ink Theory】/play brokencoral",
-					},
-					{
-							name: "indéfini",
-							value: "indéfini",
-					},
-					{
-							name: 'indéfini',
-							value: "indéfini",
-					},
-					{
-							name: 'indéfini',
-							value: "indéfini",
-					},
-			],
-	}});
-}
-});
-
 
 bot.on('message', message => {
    if (message.content.startsWith("/roll")) {
@@ -161,61 +114,4 @@ message.channel.send(":wave: | Bonjour, " + message.author.username, {
 })
 });
 
-bot.on('message',message => {
-if (message.content === "/play inkoming") {
 
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./inkomingh.mp3')
-    message.channel.sendMessage(":musical_note: | La musique : **Inkoming** *Splatoon2* est lancée. `[2:56]`")
-});
-};
-});
-
-
-bot.on('message',message => {
-if (message.content === "/play colorpulse") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./colorpulseh.mp3')
-    message.channel.sendMessage(":musical_note: | La musique : **Color pulse** *Splatoon2* est lancée. `[4:04]`")
-});
-};
-});
-
-
-
-bot.on('message',message => {
-if (message.content === "/play spicycalamari") {
-
-
-let voiceChannel = message.guild.channels
-.filter(function (channel) { return channel.type === 'voice' })
-.first()
-voiceChannel
-.join()
-.then(function (connection) {
-  connection.playFile('./spicycalamarih.mp3')
-    message.channel.sendMessage(":musical_note: | La musique : **Spicy calamri inkentation** *Splatoon2* est lancée. `[3:56]`")
-});
-};
-});
-
-
-bot.on('guildMemberAdd', member => {
-  member.createDM().then(channel => {
-    return channel.send('Bienvenue sur le serveur : ' + guild.displayName)
-  }).catch(console.error)
-  // On pourrait catch l'erreur autrement ici (l'utilisateur a peut être désactivé les MP)
-})
