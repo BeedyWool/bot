@@ -8,7 +8,7 @@ bot.on("ready", function () {
 	console.log("Bot connecté");
 });
 
-bot.login("")
+bot.login("process.env.TOKEN")
 
 bot.on('message', msg => {
   if (msg.content.startsWith('/invite')) {
