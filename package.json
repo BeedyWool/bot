@@ -4,8 +4,6 @@
   "description": "bot de beedy",
   "main": "index.js",
   "scripts": {
-    "test": "echo "Error: no test specified" && exit 1"
-  },
   "opusscript": "0.0.3",
   "author": "",
   "license": "MIT",
