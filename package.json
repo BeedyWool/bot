@@ -1,9 +1,11 @@
 {
-  "name": "TheVpoid",
+  "name": "TheVoid",
   "version": "1.0.0",
-  "description": "bot de beedy",
+  "description": "bot de beedywool",
   "main": "index.js",
   "scripts": {
+
+  },
   "opusscript": "0.0.3",
   "author": "",
   "license": "MIT",
